@@ -16,7 +16,7 @@ cd SECUREPDF/Application/
 
 3. To encrypt a document, execute the following command:
 ```bash
-java -p "/path/to/pdf/document" -pass "password-to-encrypt-document"
+java -jar PDFENCRYPTOR-1.0-SNAPSHOT.jar -p "/path/to/pdf/document" -pass "password-to-encrypt-document"
 ```
 
 
