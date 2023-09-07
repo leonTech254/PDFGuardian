@@ -46,7 +46,13 @@ public class PdfWArgument {
                     return;
                 }
             }
+            else if ("-h".equals(args[i]) || "-help".equals(args[i])) {
+                Help();
+                System.exit(0);
+            }
+
         }
+
 
 
         if (pdfPath == null || password == null) {
@@ -121,5 +127,22 @@ public class PdfWArgument {
         }
         return files[filetoEncrypt].toString();
     }
+
+    public static void Help() {
+        String description =Colors.YELLOW+"DESCRIPTION:\n "+Colors.GREEN+
+                "This is a straightforward Java command-line tool developed by the LeonteqSecurity team for encrypting PDF files using the Apache PDFBox library. It enables you to protect your PDF documents with a password and specify the encryption key length.\n";
+
+        String previewUse = Colors.YELLOW+"USAGE:\n"+Colors.GREEN+
+                "java -jar PDFENCRYPTOR-1.0-SNAPSHOT.jar [Options] {value}\n";
+
+        String example =Colors.YELLOW+ "EXAMPLE:\n"+Colors.GREEN+
+                "\tjava -jar -pass password123 -p \"/home/leon/leonteqsecurity/files/myfile.pdf\"\n";
+
+        String arguments =Colors.YELLOW+ "OPTIONS:\n" +Colors.GREEN+
+                "-p: Specifies the path to your document or directory. This argument can take the PDF file or directory. If a directory is specified, all PDF documents within it will be listed, and you will be prompted to choose the one you want to encrypt.\n" +
+                "-pass: Specifies the password with which you want to encrypt the document.\n";
+        System.out.println(description+previewUse+arguments+example);
+    }
+
 
 }
