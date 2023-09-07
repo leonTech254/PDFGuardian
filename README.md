@@ -28,7 +28,20 @@ git clone git@github.com:leonTech254/SECUREPDF.git
 cd PDFGuardian/Application/
 ```
 
-3. To encrypt a document, execute the following command:
+
+3. Check if Java is installed on your Machine
+- For Linux/Unix Systems (Bash Script):
+    Use a Bash script (filename: startup.sh).
+    Run the script with 'sudo' privileges (root access) to check and install Java if necessary.
+    The script detects the OS, updates package information, and installs OpenJDK 11 on Linux if Java is not found.
+
+- For Windows Systems (Batch Script):
+    Utilize a Windows batch script (filename: startup.bat).
+    Run the script as an administrator to check and install Java if needed.
+    The script checks for Java using 'java -version' and installs Java based on the Windows version.
+# 
+
+4. To encrypt a document, execute the following command:
 ```bash
 java -jar PDFENCRYPTOR-1.0-SNAPSHOT.jar -p "/path/to/pdf/document" -pass "password-to-encrypt-document"
 ```
