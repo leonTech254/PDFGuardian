@@ -15,10 +15,8 @@ public class PdfWArgument {
             System.out.println("Usage: java PDFEncryptionExample -p <path_to_pdf> -pass <password>");
             return;
         }
-
         String pdfPath = args[1];
         String password = args[3];
-
         try {
             PDDocument document = PDDocument.load(new File(pdfPath));
 
