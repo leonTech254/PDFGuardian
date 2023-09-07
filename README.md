@@ -10,7 +10,7 @@ $$ |      $$$$$$$  |$$ |      \$$$$$$  |\$$$$$$  |\$$$$$$$ |$$ |      \$$$$$$$ |
 \__|      \_______/ \__|       \______/  \______/  \_______|\__|       \_______|\__| \_______|\__|  \__|
                                                                                                         
 ```                                                                                                                                                                                                       
-# SECUREPDF
+# PDFGuardian
 This is a straightforward Java command-line tool developed by the LeonteqSecurity team for encrypting PDF files using the Apache PDFBox library. It enables you to protect your PDF documents with a password and specify the encryption key length.
 ## Usage
 
@@ -23,7 +23,7 @@ git clone git@github.com:leonTech254/SECUREPDF.git
 
 2. Navigate to the Application directory.
 ```bash
-cd SECUREPDF/Application/
+cd PDFGuardian/Application/
 ```
 
 3. To encrypt a document, execute the following command:
