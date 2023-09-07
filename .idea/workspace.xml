@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad432eab-2828-46db-9b27-8512912882d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/PDFENCRYPTOR-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Application/PDFENCRYPTOR-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PdfWArgument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PdfWArgument.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

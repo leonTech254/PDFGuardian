@@ -56,7 +56,8 @@ public class PdfWArgument {
 
 
         if (pdfPath == null || password == null) {
-            System.out.println("Usage: java PDFEncryptionExample -p <path_to_pdf> -pass <password>");
+//            System.out.println("Usage: java PDFEncryptionExample -p <path_to_pdf> -pass <password>");
+            Help();
             return;
         }
 
