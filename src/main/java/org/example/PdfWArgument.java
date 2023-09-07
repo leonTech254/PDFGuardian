@@ -11,12 +11,32 @@ import java.io.IOException;
 
 public class PdfWArgument {
     public static void main(String[] args) {
-        if (args.length != 4 || !args[0].equals("-p") || !args[2].equals("-pass")) {
+        String pdfPath = null;
+        String password = null;
+
+        for (int i = 0; i < args.length; i++) {
+            if ("-p".equals(args[i])) {
+                if (i + 1 < args.length) {
+                    pdfPath = args[i + 1];
+                } else {
+                    System.out.println("Missing PDF file path.");
+                    return;
+                }
+            } else if ("-pass".equals(args[i])) {
+                if (i + 1 < args.length) {
+                    password = args[i + 1];
+                } else {
+                    System.out.println("Missing password.");
+                    return;
+                }
+            }
+        }
+
+        if (pdfPath == null || password == null) {
             System.out.println("Usage: java PDFEncryptionExample -p <path_to_pdf> -pass <password>");
             return;
         }
-        String pdfPath = args[1];
-        String password = args[3];
+
         try {
             PDDocument document = PDDocument.load(new File(pdfPath));
 
@@ -30,7 +50,7 @@ public class PdfWArgument {
 
             document.close();
 
-            System.out.println("PDF file encrypted successfully and saved as k" + outputFilePath);
+            System.out.println("PDF file encrypted successfully and saved as " + outputFilePath);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (BadSecurityHandlerException e) {
